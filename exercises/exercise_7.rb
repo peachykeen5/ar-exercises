@@ -25,13 +25,7 @@ puts "Please enter a store name"
 #puts "Do you sell mens apparel? true/false"
 #@requested_mens_apparel = gets.chomp
 
-p @user_store = Store.create(name: @requested_name)
-
 #p @user_store = Store.create(name: @requested_name, annual_revenue: @requested_revenue, mens_apparel: @requested_mens_apparel, womens_apparel: @requested_womens_apparel)
-puts @user_store.valid?
-puts @user_store.errors[:name]
-#puts @user_store.errors[:annual_revenue]
 
-
-
-
+@user_store = Store.create(name: @requested_name)
+puts @user_store.errors.messages
